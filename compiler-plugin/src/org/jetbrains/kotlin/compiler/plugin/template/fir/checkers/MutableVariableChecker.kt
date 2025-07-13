@@ -78,15 +78,6 @@ object MutableVariableChecker : FirSimpleFunctionChecker(MppCheckerKind.Common) 
                             context
                         )
                     }
-                    is FirPropertySymbol -> {
-                        reporter.reportOn(
-                            variableAssignment.source,
-                            KotlinVerifierErrors.VAR_ASSIGNMENT_IN_FUNCTION,
-                            resolvedSymbol.name.asString(),
-                            functionName,
-                            context
-                        )
-                    }
                     null -> {
                         // Could not resolve symbol, skip
                     }
