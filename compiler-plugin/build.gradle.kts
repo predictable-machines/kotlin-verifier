@@ -28,6 +28,9 @@ val annotationsRuntimeClasspath: Configuration by configurations.creating { isTr
 
 dependencies {
     compileOnly(kotlin("compiler"))
+    
+    // Include IntelliJ PSI dependencies as implementation so they're available at runtime
+    implementation(kotlin("compiler"))
 
     testFixturesApi(kotlin("test-junit5"))
     testFixturesApi(kotlin("compiler-internal-test-framework"))
