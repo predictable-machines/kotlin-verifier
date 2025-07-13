@@ -1,0 +1,6 @@
+FILE: simpleUnitTest.kt
+    public final fun printMessage(): R|kotlin/Unit| {
+    }
+    public final fun simpleUnitTest(): R|kotlin/Unit| {
+        R|/printMessage|()
+    }

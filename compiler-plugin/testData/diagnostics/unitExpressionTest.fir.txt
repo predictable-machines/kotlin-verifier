@@ -1,0 +1,11 @@
+FILE: unitExpressionTest.kt
+    public final fun println(message: R|kotlin/Any?|): R|kotlin/Unit| {
+    }
+    public final fun sideEffectFunction(): R|kotlin/Unit| {
+    }
+    public final fun testFunction(): R|kotlin/Unit| {
+        R|/println|(String(Hello World))
+        R|/sideEffectFunction|()
+        lval x: R|kotlin/Int| = Int(42)
+        lval y: R|kotlin/Int| = R|<local>/x|.R|kotlin/Int.plus|(Int(1))
+    }

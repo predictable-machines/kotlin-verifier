@@ -34,8 +34,20 @@ public class JvmDiagnosticTestGenerated extends AbstractJvmDiagnosticTest {
   }
 
   @Test
+  @TestMetadata("simpleUnitTest.kt")
+  public void testSimpleUnitTest() {
+    runTest("compiler-plugin/testData/diagnostics/simpleUnitTest.kt");
+  }
+
+  @Test
   @TestMetadata("simpleVarCheck.kt")
   public void testSimpleVarCheck() {
     runTest("compiler-plugin/testData/diagnostics/simpleVarCheck.kt");
+  }
+
+  @Test
+  @TestMetadata("unitExpressionTest.kt")
+  public void testUnitExpressionTest() {
+    runTest("compiler-plugin/testData/diagnostics/unitExpressionTest.kt");
   }
 }
