@@ -1,4 +1,5 @@
 FILE: simple.kt
+    @FILE:R|org/jetbrains/kotlin/compiler/plugin/template/Pure|()
     package foo.bar
 
     public final fun test(): R|kotlin/Unit| {

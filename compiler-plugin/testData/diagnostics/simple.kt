@@ -1,6 +1,10 @@
+@file:Pure
+
 // RUN_PIPELINE_TILL: FRONTEND
 
 package foo.bar
+
+import org.jetbrains.kotlin.compiler.plugin.template.Pure
 
 fun test() {
     // Test our mutable variable checker instead

@@ -1,4 +1,7 @@
 FILE: simpleVarCheck.kt
+    @FILE:R|org/jetbrains/kotlin/compiler/plugin/template/Pure|()
+    package org.jetbrains.kotlin.compiler.plugin.template
+
     public final fun test(): R|kotlin/Unit| {
         lvar x: R|kotlin/Int| = Int(1)
         R|<local>/x| = Int(2)

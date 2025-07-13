@@ -1,9 +1,10 @@
-FILE: simpleUnitTest.kt
-    @FILE:R|org/jetbrains/kotlin/compiler/plugin/template/Pure|()
+FILE: noPureAnnotationTest.kt
     package org.jetbrains.kotlin.compiler.plugin.template
 
     public final fun printMessage(): R|kotlin/Unit| {
     }
-    public final fun simpleUnitTest(): R|kotlin/Unit| {
+    public final fun testNoPureFile(): R|kotlin/Unit| {
+        lvar counter: R|kotlin/Int| = Int(0)
+        R|<local>/counter| = Int(1)
         R|org/jetbrains/kotlin/compiler/plugin/template/printMessage|()
     }

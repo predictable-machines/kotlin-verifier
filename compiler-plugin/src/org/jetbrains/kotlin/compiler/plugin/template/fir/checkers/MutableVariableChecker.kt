@@ -18,10 +18,14 @@ import org.jetbrains.kotlin.fir.symbols.impl.FirVariableSymbol
 import org.jetbrains.kotlin.fir.visitors.FirVisitorVoid
 
 object MutableVariableChecker : FirSimpleFunctionChecker(MppCheckerKind.Common) {
+    
     override fun check(declaration: FirSimpleFunction, context: CheckerContext, reporter: DiagnosticReporter) {
-        val functionName = declaration.name.asString()
-        val visitor = MutableVariableVisitor(functionName, context, reporter)
-        declaration.body?.accept(visitor)
+        // Only run purity checks if @Pure annotation is present
+        if (PureAnnotationUtils.hasFileLevelPureAnnotation(context)) {
+            val functionName = declaration.name.asString()
+            val visitor = MutableVariableVisitor(functionName, context, reporter)
+            declaration.body?.accept(visitor)
+        }
     }
     
     private class MutableVariableVisitor(

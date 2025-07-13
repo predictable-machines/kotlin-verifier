@@ -1,4 +1,8 @@
+@file:Pure
+
 // RUN_PIPELINE_TILL: FRONTEND
+
+package org.jetbrains.kotlin.compiler.plugin.template
 
 fun println(message: Any?): Unit {}
 

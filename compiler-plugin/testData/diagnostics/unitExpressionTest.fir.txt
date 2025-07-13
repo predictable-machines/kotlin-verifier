@@ -1,11 +1,14 @@
 FILE: unitExpressionTest.kt
+    @FILE:R|org/jetbrains/kotlin/compiler/plugin/template/Pure|()
+    package org.jetbrains.kotlin.compiler.plugin.template
+
     public final fun println(message: R|kotlin/Any?|): R|kotlin/Unit| {
     }
     public final fun sideEffectFunction(): R|kotlin/Unit| {
     }
     public final fun testFunction(): R|kotlin/Unit| {
-        R|/println|(String(Hello World))
-        R|/sideEffectFunction|()
+        R|org/jetbrains/kotlin/compiler/plugin/template/println|(String(Hello World))
+        R|org/jetbrains/kotlin/compiler/plugin/template/sideEffectFunction|()
         lval x: R|kotlin/Int| = Int(42)
         lval y: R|kotlin/Int| = R|<local>/x|.R|kotlin/Int.plus|(Int(1))
     }

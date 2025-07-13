@@ -22,6 +22,18 @@ public class JvmDiagnosticTestGenerated extends AbstractJvmDiagnosticTest {
   }
 
   @Test
+  @TestMetadata("noPureAnnotationTest.kt")
+  public void testNoPureAnnotationTest() {
+    runTest("compiler-plugin/testData/diagnostics/noPureAnnotationTest.kt");
+  }
+
+  @Test
+  @TestMetadata("pureAnnotationTest.kt")
+  public void testPureAnnotationTest() {
+    runTest("compiler-plugin/testData/diagnostics/pureAnnotationTest.kt");
+  }
+
+  @Test
   @TestMetadata("simple.kt")
   public void testSimple() {
     runTest("compiler-plugin/testData/diagnostics/simple.kt");

@@ -19,10 +19,14 @@ import org.jetbrains.kotlin.fir.types.isUnit
 import org.jetbrains.kotlin.fir.visitors.FirVisitorVoid
 
 object UnitExpressionChecker : FirSimpleFunctionChecker(MppCheckerKind.Common) {
+    
     override fun check(declaration: FirSimpleFunction, context: CheckerContext, reporter: DiagnosticReporter) {
-        val functionName = declaration.name.asString()
-        val visitor = UnitExpressionVisitor(functionName, context, reporter)
-        declaration.body?.accept(visitor)
+        // Only run purity checks if @Pure annotation is present
+        if (PureAnnotationUtils.hasFileLevelPureAnnotation(context)) {
+            val functionName = declaration.name.asString()
+            val visitor = UnitExpressionVisitor(functionName, context, reporter)
+            declaration.body?.accept(visitor)
+        }
     }
     
     private class UnitExpressionVisitor(

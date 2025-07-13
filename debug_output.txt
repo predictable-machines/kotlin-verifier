@@ -1,0 +1,70 @@
+Reusing configuration cache.
+> Task :plugin-annotations:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compiler-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compiler-plugin:generateTestBuildConfig SKIPPED
+> Task :compiler-plugin:generateTestFixturesBuildConfig SKIPPED
+> Task :plugin-annotations:jvmProcessResources NO-SOURCE
+> Task :compiler-plugin:processTestFixturesResources NO-SOURCE
+> Task :plugin-annotations:processJvmMainResources SKIPPED
+> Task :compiler-plugin:processTestResources UP-TO-DATE
+> Task :compiler-plugin:processResources UP-TO-DATE
+> Task :compiler-plugin:generateBuildConfig UP-TO-DATE
+> Task :plugin-annotations:compileKotlinJvm UP-TO-DATE
+> Task :plugin-annotations:compileJvmMainJava NO-SOURCE
+> Task :compiler-plugin:compileKotlin UP-TO-DATE
+> Task :plugin-annotations:jvmMainClasses UP-TO-DATE
+> Task :plugin-annotations:jvmJar UP-TO-DATE
+> Task :compiler-plugin:compileJava NO-SOURCE
+> Task :compiler-plugin:classes UP-TO-DATE
+> Task :compiler-plugin:jar UP-TO-DATE
+> Task :compiler-plugin:compileTestFixturesKotlin UP-TO-DATE
+> Task :compiler-plugin:compileTestFixturesJava NO-SOURCE
+> Task :compiler-plugin:testFixturesClasses UP-TO-DATE
+> Task :compiler-plugin:testFixturesJar UP-TO-DATE
+> Task :compiler-plugin:generateTests UP-TO-DATE
+> Task :compiler-plugin:compileTestKotlin NO-SOURCE
+> Task :compiler-plugin:compileTestJava UP-TO-DATE
+> Task :compiler-plugin:testClasses UP-TO-DATE
+
+> Task :compiler-plugin:test FAILED
+
+JvmDiagnosticTestGenerated > testSimple() FAILED
+    org.opentest4j.AssertionFailedError at JvmDiagnosticTestGenerated.java:39
+
+JvmDiagnosticTestGenerated > testNoPureAnnotationTest() FAILED
+    org.opentest4j.AssertionFailedError at JvmDiagnosticTestGenerated.java:27
+
+JvmDiagnosticTestGenerated > testPureAnnotationTest() FAILED
+    org.gradle.internal.exceptions.DefaultMultiCauseException at JvmDiagnosticTestGenerated.java:33
+        Caused by: org.opentest4j.AssertionFailedError at JvmDiagnosticTestGenerated.java:33
+
+JvmDiagnosticTestGenerated > testUnitExpressionTest() FAILED
+    org.gradle.internal.exceptions.DefaultMultiCauseException at JvmDiagnosticTestGenerated.java:63
+        Caused by: org.opentest4j.AssertionFailedError at JvmDiagnosticTestGenerated.java:63
+
+JvmDiagnosticTestGenerated > testSimpleVarCheck() FAILED
+    org.gradle.internal.exceptions.DefaultMultiCauseException at JvmDiagnosticTestGenerated.java:57
+        Caused by: org.opentest4j.AssertionFailedError at JvmDiagnosticTestGenerated.java:57
+
+JvmDiagnosticTestGenerated > testSimpleUnitTest() FAILED
+    org.gradle.internal.exceptions.DefaultMultiCauseException at JvmDiagnosticTestGenerated.java:51
+        Caused by: org.opentest4j.AssertionFailedError at JvmDiagnosticTestGenerated.java:51
+
+JvmDiagnosticTestGenerated > testSimpleMutableTest() FAILED
+    org.gradle.internal.exceptions.DefaultMultiCauseException at JvmDiagnosticTestGenerated.java:45
+        Caused by: org.opentest4j.AssertionFailedError at JvmDiagnosticTestGenerated.java:45
+
+11 tests completed, 7 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compiler-plugin:test'.
+> There were failing tests. See the report at: file:///Users/raulraja/predictable-machines/kotlin-verifier/compiler-plugin/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 2s
+12 actionable tasks: 1 executed, 11 up-to-date
+Configuration cache entry reused.
