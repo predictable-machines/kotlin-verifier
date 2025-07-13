@@ -9,13 +9,15 @@ import org.jetbrains.kotlin.compiler.plugin.template.fir.checkers.MutableVariabl
 import org.jetbrains.kotlin.compiler.plugin.template.fir.checkers.UnitExpressionChecker
 import org.jetbrains.kotlin.compiler.plugin.template.fir.checkers.LoopExpressionChecker
 import org.jetbrains.kotlin.compiler.plugin.template.fir.checkers.TopLevelMutableVariableChecker
+import org.jetbrains.kotlin.compiler.plugin.template.fir.checkers.ThrowExpressionChecker
 
 class KotlinVerifierAdditionalCheckers(session: FirSession) : FirAdditionalCheckersExtension(session) {
     override val declarationCheckers: DeclarationCheckers = object : DeclarationCheckers() {
         override val simpleFunctionCheckers: Set<FirSimpleFunctionChecker> = setOf(
             MutableVariableChecker,
             UnitExpressionChecker,
-            LoopExpressionChecker
+            LoopExpressionChecker,
+            ThrowExpressionChecker
         )
         
         override val propertyCheckers: Set<FirPropertyChecker> = setOf(

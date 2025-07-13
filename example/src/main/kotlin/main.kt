@@ -17,6 +17,7 @@ import org.jetbrains.kotlin.compiler.plugin.template.Pure
  * 4. `GlobalStateExamples.kt` – reads/writes of global mutable state
  * 5. `SideEffectExamples.kt` – explicit I/O, randomness, etc.
  * 6. `MutableCollectionExamples.kt` – in-place collection updates
+ * 7. `ThrowExpressionExamples.kt` – throw expressions that violate functional purity
  *
  * The examples compile successfully because they do **not** place the `@file:Pure`
  * annotation at the top of their files. Adding that annotation would trigger

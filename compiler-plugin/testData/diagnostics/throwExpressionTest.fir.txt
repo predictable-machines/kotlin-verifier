@@ -1,0 +1,30 @@
+FILE: throwExpressionTest.kt
+    @FILE:R|org/jetbrains/kotlin/compiler/plugin/template/Pure|()
+    package org.jetbrains.kotlin.compiler.plugin.template
+
+    public final fun validateInput(value: R|kotlin/String|): R|kotlin/String| {
+        when () {
+            R|<local>/value|.R|kotlin/text/isEmpty|() ->  {
+                throw R|java/lang/IllegalArgumentException.IllegalArgumentException|(String(Value cannot be empty))
+            }
+        }
+
+        ^validateInput R|<local>/value|
+    }
+    public final fun parseOrThrow(str: R|kotlin/String|): R|kotlin/Int| {
+        ^parseOrThrow R|<local>/str|.R|kotlin/text/toIntOrNull|() ?: throw R|java/lang/NumberFormatException.NumberFormatException|(String(Invalid number))
+    }
+    public final fun handleCase(input: R|kotlin/Int|): R|kotlin/String| {
+        ^handleCase when (R|<local>/input|) {
+            ==($subj$, Int(1)) ->  {
+                String(One)
+            }
+            ==($subj$, Int(2)) ->  {
+                String(Two)
+            }
+            else ->  {
+                throw R|java/lang/UnsupportedOperationException.UnsupportedOperationException|(String(Unsupported input))
+            }
+        }
+
+    }

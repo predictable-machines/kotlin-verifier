@@ -9,4 +9,5 @@ object KotlinVerifierErrors {
     val UNIT_EXPRESSION_IN_FUNCTION by error2<PsiElement, String, String>()
     val LOOP_EXPRESSION_IN_FUNCTION by error2<PsiElement, String, String>()
     val TOP_LEVEL_MUTABLE_VAR by error2<PsiElement, String, String>()
+    val THROW_EXPRESSION_IN_FUNCTION by error2<PsiElement, String, String>()
 }

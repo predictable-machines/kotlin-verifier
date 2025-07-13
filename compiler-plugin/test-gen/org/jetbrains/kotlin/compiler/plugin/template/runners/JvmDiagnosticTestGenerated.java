@@ -70,6 +70,12 @@ public class JvmDiagnosticTestGenerated extends AbstractJvmDiagnosticTest {
   }
 
   @Test
+  @TestMetadata("throwExpressionTest.kt")
+  public void testThrowExpressionTest() {
+    runTest("compiler-plugin/testData/diagnostics/throwExpressionTest.kt");
+  }
+
+  @Test
   @TestMetadata("unitExpressionTest.kt")
   public void testUnitExpressionTest() {
     runTest("compiler-plugin/testData/diagnostics/unitExpressionTest.kt");
