@@ -1,0 +1,18 @@
+FILE: loopExpressionTest.kt
+    @FILE:R|org/jetbrains/kotlin/compiler/plugin/template/Pure|()
+    package org.jetbrains.kotlin.compiler.plugin.template
+
+    public final fun loopTest(): R|kotlin/Unit| {
+        lval numbers: R|kotlin/collections/List<kotlin/Int>| = R|kotlin/collections/listOf|<R|kotlin/Int|>(vararg(Int(1), Int(2), Int(3)))
+         {
+            lval <iterator>: R|kotlin/collections/Iterator<kotlin/Int>| = R|<local>/numbers|.R|SubstitutionOverride<kotlin/collections/List.iterator: R|kotlin/collections/Iterator<kotlin/Int>|>|()
+            while(R|<local>/<iterator>|.R|SubstitutionOverride<kotlin/collections/Iterator.hasNext: R|kotlin/Boolean|>|()) {
+                lval n: R|kotlin/Int| = R|<local>/<iterator>|.R|SubstitutionOverride<kotlin/collections/Iterator.next: R|kotlin/Int|>|()
+                 {
+                }
+
+            }
+
+        }
+
+    }

@@ -1,0 +1,9 @@
+FILE: unitSuspendExpressionTest.kt
+    @FILE:R|org/jetbrains/kotlin/compiler/plugin/template/Pure|()
+    package org.jetbrains.kotlin.compiler.plugin.template
+
+    public final suspend fun suspendSideEffect(): R|kotlin/Unit| {
+    }
+    public final suspend fun testSuspendAllowed(): R|kotlin/Unit| {
+        R|org/jetbrains/kotlin/compiler/plugin/template/suspendSideEffect|()
+    }

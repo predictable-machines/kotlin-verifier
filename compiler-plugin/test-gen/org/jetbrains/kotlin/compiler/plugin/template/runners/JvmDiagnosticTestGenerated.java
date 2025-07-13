@@ -22,6 +22,12 @@ public class JvmDiagnosticTestGenerated extends AbstractJvmDiagnosticTest {
   }
 
   @Test
+  @TestMetadata("loopExpressionTest.kt")
+  public void testLoopExpressionTest() {
+    runTest("compiler-plugin/testData/diagnostics/loopExpressionTest.kt");
+  }
+
+  @Test
   @TestMetadata("noPureAnnotationTest.kt")
   public void testNoPureAnnotationTest() {
     runTest("compiler-plugin/testData/diagnostics/noPureAnnotationTest.kt");
@@ -61,5 +67,11 @@ public class JvmDiagnosticTestGenerated extends AbstractJvmDiagnosticTest {
   @TestMetadata("unitExpressionTest.kt")
   public void testUnitExpressionTest() {
     runTest("compiler-plugin/testData/diagnostics/unitExpressionTest.kt");
+  }
+
+  @Test
+  @TestMetadata("unitSuspendExpressionTest.kt")
+  public void testUnitSuspendExpressionTest() {
+    runTest("compiler-plugin/testData/diagnostics/unitSuspendExpressionTest.kt");
   }
 }

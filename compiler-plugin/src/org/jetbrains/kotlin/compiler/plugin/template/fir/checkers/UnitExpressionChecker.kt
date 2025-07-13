@@ -49,6 +49,14 @@ object UnitExpressionChecker : FirSimpleFunctionChecker(MppCheckerKind.Common) {
                         val returnTypeRef = resolvedSymbol.resolvedReturnTypeRef
                         val returnType = returnTypeRef.coneType
                         if (returnType.isUnit) {
+                            // Skip suspend functions returning Unit; they are allowed
+                            @OptIn(org.jetbrains.kotlin.fir.symbols.SymbolInternals::class)
+                            val isSuspendFunction = resolvedSymbol.fir.status.isSuspend
+                            if (isSuspendFunction) {
+                                // Suspend functions are permitted; do not report
+                                super.visitFunctionCall(functionCall)
+                                return
+                            }
                             val functionNameCalled = resolvedSymbol.name.asString()
                             
                             reporter.reportOn(
