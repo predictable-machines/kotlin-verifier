@@ -50,8 +50,8 @@ object UnitExpressionChecker : FirSimpleFunctionChecker(MppCheckerKind.Common) {
                             reporter.reportOn(
                                 functionCall.source,
                                 KotlinVerifierErrors.UNIT_EXPRESSION_IN_FUNCTION,
-                                functionNameCalled,
-                                functionName,
+                                "Function call '$functionNameCalled()' returning Unit indicates side effects - functions should be pure expressions",
+                                "in function '$functionName'",
                                 context
                             )
                         }

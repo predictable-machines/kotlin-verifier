@@ -39,8 +39,8 @@ object MutableVariableChecker : FirSimpleFunctionChecker(MppCheckerKind.Common) 
                 reporter.reportOn(
                     property.source,
                     KotlinVerifierErrors.MUTABLE_VAR_IN_FUNCTION,
-                    property.name.asString(),
-                    functionName,
+                    "Mutable variable '${property.name.asString()}' violates functional purity - functions should not declare mutable state",
+                    "in function '$functionName'",
                     context
                 )
             }
@@ -54,8 +54,8 @@ object MutableVariableChecker : FirSimpleFunctionChecker(MppCheckerKind.Common) 
                 reporter.reportOn(
                     variable.source,
                     KotlinVerifierErrors.MUTABLE_VAR_IN_FUNCTION,
-                    variable.name.asString(),
-                    functionName,
+                    "Mutable variable '${variable.name.asString()}' violates functional purity - functions should not declare mutable state",
+                    "in function '$functionName'",
                     context
                 )
             }
@@ -72,8 +72,8 @@ object MutableVariableChecker : FirSimpleFunctionChecker(MppCheckerKind.Common) 
                         reporter.reportOn(
                             variableAssignment.source,
                             KotlinVerifierErrors.VAR_ASSIGNMENT_IN_FUNCTION,
-                            resolvedSymbol.name.asString(),
-                            functionName,
+                            "Assignment to variable '${resolvedSymbol.name.asString()}' violates immutability - functions should not modify state",
+                            "in function '$functionName'",
                             context
                         )
                     }
