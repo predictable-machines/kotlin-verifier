@@ -5,7 +5,7 @@
 package org.jetbrains.kotlin.compiler.plugin.template
 
 // Top-level mutable variable used in the following functions
-var globalCounter: Int = 0
+<!TOP_LEVEL_MUTABLE_VAR!>var globalCounter: Int = 0<!>
 
 object GlobalStateExample {
 
