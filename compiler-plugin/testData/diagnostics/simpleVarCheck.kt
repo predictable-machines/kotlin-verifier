@@ -1,4 +1,4 @@
-// RUN_PIPELINE_TILL: BACKEND
+// RUN_PIPELINE_TILL: FRONTEND
 
 fun test() {
     <!MUTABLE_VAR_IN_FUNCTION!>var x = 1<!>

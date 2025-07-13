@@ -1,7 +1,7 @@
 package com.predictable
 
 fun main() {
-    var hello = "aaaa"
-    hello = "Hello, World!"
-    println(hello)
+    var test = 0
+    test = 1
+    println("Hello, World! $test")
 }
