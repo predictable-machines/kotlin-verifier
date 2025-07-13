@@ -1,0 +1,24 @@
+FILE: globalStateTest.kt
+    @FILE:R|org/jetbrains/kotlin/compiler/plugin/template/Pure|()
+    package org.jetbrains.kotlin.compiler.plugin.template
+
+    public final var globalCounter: R|kotlin/Int| = Int(0)
+        public get(): R|kotlin/Int|
+        public set(value: R|kotlin/Int|): R|kotlin/Unit|
+    public final object GlobalStateExample : R|kotlin/Any| {
+        private constructor(): R|org/jetbrains/kotlin/compiler/plugin/template/GlobalStateExample| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final fun incrementGlobal(): R|kotlin/Int| {
+            R|org/jetbrains/kotlin/compiler/plugin/template/globalCounter| = R|org/jetbrains/kotlin/compiler/plugin/template/globalCounter|.R|kotlin/Int.plus|(Int(1))
+            ^incrementGlobal R|org/jetbrains/kotlin/compiler/plugin/template/globalCounter|
+        }
+
+        public final fun readAndResetGlobal(): R|kotlin/Int| {
+            lval value: R|kotlin/Int| = R|org/jetbrains/kotlin/compiler/plugin/template/globalCounter|
+            R|org/jetbrains/kotlin/compiler/plugin/template/globalCounter| = Int(0)
+            ^readAndResetGlobal R|<local>/value|
+        }
+
+    }

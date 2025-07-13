@@ -22,6 +22,12 @@ public class JvmDiagnosticTestGenerated extends AbstractJvmDiagnosticTest {
   }
 
   @Test
+  @TestMetadata("globalStateTest.kt")
+  public void testGlobalStateTest() {
+    runTest("compiler-plugin/testData/diagnostics/globalStateTest.kt");
+  }
+
+  @Test
   @TestMetadata("loopExpressionTest.kt")
   public void testLoopExpressionTest() {
     runTest("compiler-plugin/testData/diagnostics/loopExpressionTest.kt");
