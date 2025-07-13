@@ -3,6 +3,7 @@ plugins {
     `java-test-fixtures`
     id("com.github.gmazzo.buildconfig")
     idea
+    `maven-publish`
 }
 
 sourceSets {
@@ -102,4 +103,12 @@ fun Test.setLibraryProperty(propName: String, jarName: String) {
         ?.absolutePath
         ?: return
     systemProperty(propName, path)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+        }
+    }
 }
