@@ -2,11 +2,12 @@ package org.jetbrains.kotlin.compiler.plugin.template
 
 import org.gradle.api.Project
 import org.gradle.api.provider.Provider
-import org.jetbrains.kotlin.compiler.plugin.template.BuildConfig.ANNOTATIONS_LIBRARY_COORDINATES
 import org.jetbrains.kotlin.gradle.plugin.KotlinCompilation
 import org.jetbrains.kotlin.gradle.plugin.KotlinCompilerPluginSupportPlugin
 import org.jetbrains.kotlin.gradle.plugin.SubpluginArtifact
 import org.jetbrains.kotlin.gradle.plugin.SubpluginOption
+import org.jetbrains.kotlin.verifier.BuildConfig
+import org.jetbrains.kotlin.verifier.BuildConfig.ANNOTATIONS_LIBRARY_COORDINATES
 
 @Suppress("unused") // Used via reflection.
 class SimpleGradlePlugin : KotlinCompilerPluginSupportPlugin {

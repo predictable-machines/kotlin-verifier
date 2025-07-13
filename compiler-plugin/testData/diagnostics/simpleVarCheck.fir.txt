@@ -1,0 +1,5 @@
+FILE: simpleVarCheck.kt
+    public final fun test(): R|kotlin/Unit| {
+        lvar x: R|kotlin/Int| = Int(1)
+        R|<local>/x| = Int(2)
+    }

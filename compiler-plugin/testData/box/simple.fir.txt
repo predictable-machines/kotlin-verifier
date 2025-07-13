@@ -2,23 +2,16 @@ FILE: simple.kt
     package foo.bar
 
     public final fun box(): R|kotlin/String| {
-        lval result: R|kotlin/String| = R|foo/bar/MyClass|().R|foo/bar/MyClass.foo|()
+        lval x: R|kotlin/Int| = Int(42)
+        lval y: R|kotlin/Int| = Int(58)
+        lval sum: R|kotlin/Int| = R|<local>/x|.R|kotlin/Int.plus|(R|<local>/y|)
         ^box when () {
-            ==(R|<local>/result|, String(Hello world)) ->  {
+            ==(R|<local>/sum|, Int(100)) ->  {
                 String(OK)
             }
             else ->  {
-                <strcat>(String(Fail: ), R|<local>/result|)
+                <strcat>(String(Fail: ), R|<local>/sum|)
             }
         }
-
-    }
-FILE: __GENERATED DECLARATIONS__.kt
-    package foo.bar
-
-    public final class MyClass : R|kotlin/Any| {
-        public final fun foo(): R|kotlin/String|
-
-        public constructor(): R|foo/bar/MyClass|
 
     }

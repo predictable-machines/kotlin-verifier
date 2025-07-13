@@ -1,0 +1,6 @@
+// RUN_PIPELINE_TILL: BACKEND
+
+fun test() {
+    <!MUTABLE_VAR_IN_FUNCTION!>var x = 1<!>
+    <!VAR_ASSIGNMENT_IN_FUNCTION!>x = 2<!>
+}

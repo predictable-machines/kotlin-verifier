@@ -12,7 +12,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "compiler-plugin-template"
+rootProject.name = "kotlin-verifier"
 
 include("compiler-plugin")
 include("gradle-plugin")

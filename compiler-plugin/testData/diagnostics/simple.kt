@@ -1,11 +1,10 @@
-// RUN_PIPELINE_TILL: FRONTEND
+// RUN_PIPELINE_TILL: BACKEND
 
 package foo.bar
 
-import org.jetbrains.kotlin.compiler.plugin.template.SomeAnnotation
-
-@SomeAnnotation
 fun test() {
-    val s = MyClass().foo()
-    s.<!UNRESOLVED_REFERENCE!>inc<!>() // should be an error
+    // Test our mutable variable checker instead
+    <!MUTABLE_VAR_IN_FUNCTION!>var x = 10<!>
+    val y = 20
+    <!VAR_ASSIGNMENT_IN_FUNCTION!>x = 30<!>
 }

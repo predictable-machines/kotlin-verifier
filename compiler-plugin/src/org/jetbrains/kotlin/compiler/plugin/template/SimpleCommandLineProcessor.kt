@@ -4,6 +4,7 @@ import org.jetbrains.kotlin.compiler.plugin.AbstractCliOption
 import org.jetbrains.kotlin.compiler.plugin.CliOption
 import org.jetbrains.kotlin.compiler.plugin.CommandLineProcessor
 import org.jetbrains.kotlin.config.CompilerConfiguration
+import org.jetbrains.kotlin.verifier.BuildConfig
 
 @Suppress("unused") // Used via reflection.
 class SimpleCommandLineProcessor : CommandLineProcessor {

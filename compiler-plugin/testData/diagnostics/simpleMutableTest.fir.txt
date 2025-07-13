@@ -1,0 +1,4 @@
+FILE: simpleMutableTest.kt
+    public final fun simpleTest(): R|kotlin/Unit| {
+        lvar x: R|kotlin/Int| = Int(1)
+    }
